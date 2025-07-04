@@ -1,47 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <title>row colon span</title>
-    <style>
-        table{
-            text-align: center;
-            font-size: xx-large;
-            color: aqua;
-            background-color: black;
-        }
-        caption{
-            color: darkgreen;
-        }
-    
-
-    </style>
+  <title>Student Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaf4f4;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 20px auto;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 10px 15px;
+      text-align: center;
+    }
+    th {
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    td[colspan="2"] {
+      background-color: #d1e7dd;
+      font-weight: bold;
+      color: #333;
+    }
+    td[rowspan="2"] {
+      background-color: #f0f8ff;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <table border="n">
-    <caption><b>Using of row colon span tags</b></caption>
-    <tr>
-        <th colspan="2"> Language and Framework</th>
-    </tr>
-    <tr>
-        <td>Python</td>
-        <td>Django</td>
-    </tr>
-    <tr>
-        <td rowspan="2">Javascript</td>
-        <td>React.js</td>
-    </tr>
-    <tr>
-    
-        <td>Vue.js</td>
-    </tr>
-    <tr>
-        <td>Ruby</td>
-        <TD>Ruby on Rails</TD>
-    </tr>
 
+<h2>Student Information Table</h2>
 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Registration No</th>
+    <th>CGPA (till Last Semester)</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Anjali Sharma</td>
+    <td>REG202501</td>
+    <td>8.5</td>
+  </tr>
+  <tr>
+    <td colspan="2">Excellent Academic Record</td>
+  </tr>
+  <tr>
+    <td>Rahul Kumar</td>
+    <td rowspan="2">REG202502</td>
+    <td>7.9</td>
+  </tr>
+  <tr>
+    <td colspan="2">Participated in Sports and Events</td>
+  </tr>
+</table>
 
-    </table>
-    
 </body>
 </html>
